@@ -1,7 +1,7 @@
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  dir: 'Aanntto/demo-1-hello-world-api/cloudbuild.yaml'
+  dir: 'Aanntto/demo-1-hello-world-api'
   args: ['build', '-t', 'us-east1-docker.pkg.dev/$PROJECT_ID/my-docker-images-repo/svchelloworld:$COMMIT_SHA', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
